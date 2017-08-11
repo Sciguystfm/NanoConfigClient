@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { Dropdown, Button } from "semantic-ui-react";
-
-export class ButtonWrapper extends React.Component {
+import TableWrapper from "./table";
+class ButtonWrapper extends React.Component {
     render() {
         const ButtonExampleContentProp = () => <Button content="Click Here" />;
         return <ButtonExampleContentProp />;
     }
 }
-export class DropdownWrapper extends React.Component {
+class DropdownWrapper extends React.Component {
     render() {
         const DropdownExampleSelection = props =>
             <Dropdown
@@ -62,6 +62,8 @@ class App extends React.Component {
                     getSelected={getSelected}
                 />
                 <ButtonWrapper />
+
+                <TableWrapper />
             </div>
         );
     }
